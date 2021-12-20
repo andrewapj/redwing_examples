@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: redwing
+      MYSQL_USER: redwing
+      MYSQL_PASSWORD: redwing
+      MYSQL_DATABASE: redwing
+    ports:
+      - "3306:3306"
+    cap_add:
+      - SYS_NICE  # CAP_SYS_NICE
